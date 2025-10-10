@@ -1,52 +1,25 @@
-# =====================
-# 🔒 Environment & config
-# =====================
-.env
-.env.local
-.env.development
-.env.production
-.env.*.local
-
-# =====================
-# 🧱 Dependencies & builds
-# =====================
+# Node modules
 node_modules/
+
+# Build output
 dist/
 build/
-coverage/
 
-# =====================
-# 🧠 Logs
-# =====================
-logs
+# Logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 
-# =====================
-# 🧑‍💻 IDE & OS files
-# =====================
-.vscode/*
+# Editor & OS files
+.vscode/
 .idea/
 .DS_Store
 
-# =====================
-# ⚙️ Temp & cache
-# =====================
-.cache/
-.tmp/
-.temp/
+# dotenv file (sensible info replaced with XXXX, can include if you want)
+.env
 
-# =====================
-# 📦 Uploads / media
-# =====================
-uploads/
-server/uploads/
-
-# =====================
-# 🔑 Security
-# =====================
-secrets/
-private/
+# Database files (if any local DB used)
+*.sqlite
+*.db

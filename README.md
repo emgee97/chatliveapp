@@ -1,70 +1,120 @@
-# 💬 ChatLiveApp
+ChatLiveApp
 
-**ChatLiveApp** is a modern, real-time messaging web application built with **React**, **Node.js**, **MongoDB**, and **Socket.io** — allowing users to connect instantly, exchange text and images, and customize their profile.  
-It’s designed to be clean, fast, and intuitive — a full-stack social communication experience hosted on **Vercel**.
+ChatLiveApp is a full-stack web application for creating real-time chat rooms with advanced messaging and media management features. The project uses React (Front-end) and Node.js/Express (Back-end), deployed on Vercel.
 
----
+🎯 Project Goal
 
-## 🚀 Features
+ChatLiveApp aims to provide a modern, fast, and simple platform for real-time chatting, allowing users to share images and interact dynamically. The project also supports custom domain configuration.
 
-### 👥 User Management
-- **Signup / Login** with secure JWT authentication  
-- **Profile customization** (name, bio, and profile picture upload via Cloudinary)  
-- **Editable user profiles** that update instantly  
+💻 Tech Stack
 
-### 💬 Real-Time Chat
-- **Instant messaging** using Socket.io for live conversations  
-- **Image sharing** inside chat conversations  
-- **Message seen indicator** to know when a message has been viewed  
-- **Unread message counter** in sidebar  
+Front-end: React, Tailwind CSS
 
-### 🖼️ Media & Cloud
-- **Cloudinary integration** for safe and optimized image uploads  
-- **Dynamic avatars and logos** displayed across the app  
+Back-end: Node.js, Express
 
-### 🎨 Clean, Modern UI
-- Built with **React + TailwindCSS**  
-- Responsive and minimal interface  
-- Animated transitions and rounded visuals  
+Database: MongoDB Atlas
 
-### ⚙️ Architecture
-- **Frontend:** React + Context API for state management  
-- **Backend:** Node.js + Express + MongoDB + Mongoose  
-- **Real-time communication:** Socket.io  
-- **Cloud hosting:** Vercel (frontend) & external Node.js hosting (e.g., Render / Railway / O2Switch)  
-- **Media storage:** Cloudinary  
+Media Storage: Cloudinary
 
----
+Deployment: Vercel
 
-## 🧠 How It Works
+⚙️ Features
+Front-end
 
-1. Users register or log in securely.  
-2. On login, the app establishes a **WebSocket connection** with the server.  
-3. All connected users appear in the **sidebar**, with badges showing unread messages.  
-4. Users can send **text and image messages** — instantly synced between both clients.  
-5. **Profile updates** are uploaded to **Cloudinary**, and the image URL is saved in MongoDB.  
-6. When a message is read, it’s marked as **seen** in real time.  
+Responsive modern interface
 
----
+JWT-based authentication
 
-## ⚡ Tech Stack
+Real-time messaging
 
-| Category | Technology |
-|-----------|-------------|
-| Frontend | React, Vite, TailwindCSS |
-| Backend | Node.js, Express |
-| Database | MongoDB (Mongoose) |
-| Real-time | Socket.io |
-| Auth | JWT |
-| Media | Cloudinary |
-| Deployment | Vercel / Render |
-| Hosting | O2Switch (domain), Vercel (frontend) |
+Image upload and display
 
----
+User profile management (avatar, username)
 
-## 🛠️ Setup (for developers)
+Back-end
 
-### 1️⃣ Clone the project
-```bash
-git clone https://github.com/emgee97/chatliveapp.git
+Secure REST API with JWT
+
+User and session management
+
+MongoDB for storing messages and profiles
+
+Secure Cloudinary uploads
+
+Deployment
+
+Custom domains (maximeguillaumin.com and chatliveapp.maximeguillaumin.com)
+
+DNS configuration for Vercel
+
+Automatic CI/CD from GitHub
+
+⚠️ Security & Sensitive Files
+
+For the public repository, all sensitive information has been replaced with placeholders (XXXX) in the .env file:
+
+MONGODB_URI="XXXX"
+JWT_SECRET="XXXX"
+CLOUDINARY_API_KEY="XXXX"
+CLOUDINARY_API_SECRET="XXXX"
+
+
+⚠️ Never include real credentials in a public repo.
+
+📦 Installation & Usage
+
+Clone the repo:
+
+git clone https://github.com/emgee97/chatliveapp-public.git
 cd chatliveapp
+
+
+Install dependencies for both front-end and back-end:
+
+# Front-end
+cd client
+npm install
+
+# Back-end
+cd ../server
+npm install
+
+
+Create a .env file with your real credentials:
+
+MONGODB_URI="your_mongodb_uri"
+JWT_SECRET="your_jwt_secret"
+CLOUDINARY_CLOUD_NAME="your_cloud_name"
+CLOUDINARY_API_KEY="your_api_key"
+CLOUDINARY_API_SECRET="your_api_secret"
+
+
+Run the project:
+
+# Front-end
+cd ../client
+npm start
+
+# Back-end
+cd ../server
+npm run dev
+
+
+Access the app in your browser:
+
+http://localhost:3000
+
+🔗 Deployment
+
+The project is deployed on Vercel:
+
+Front-end: https://chatliveapp.vercel.app
+
+Custom domain: https://chatliveapp.maximeguillaumin.com
+
+📂 Project Structure
+chatliveapp/
+├─ client/         # React Front-end
+├─ server/         # Node/Express Back-end
+├─ .gitignore      # Ignore sensitive and temporary files
+├─ README.md       # This file
