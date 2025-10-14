@@ -1,120 +1,70 @@
-ChatLiveApp
+ChatLiveApp is a real-time chat application that allows users to communicate instantly in a seamless, user-friendly interface. Built with a modern React frontend and Node.js/Express backend, it provides a complete end-to-end messaging experience.
 
-ChatLiveApp is a full-stack web application for creating real-time chat rooms with advanced messaging and media management features. The project uses React (Front-end) and Node.js/Express (Back-end), deployed on Vercel.
+Features
 
-🎯 Project Goal
+Real-time Messaging – Messages are sent and received instantly using WebSocket or similar real-time technology.
 
-ChatLiveApp aims to provide a modern, fast, and simple platform for real-time chatting, allowing users to share images and interact dynamically. The project also supports custom domain configuration.
+User Authentication – Secure login and signup with JWT tokens.
 
-💻 Tech Stack
+Profile Management – Users can update their profiles and upload a profile picture.
 
-Front-end: React, Tailwind CSS
+Cloud Storage – Image uploads are handled via Cloudinary.
 
-Back-end: Node.js, Express
+Responsive Design – Works perfectly on both desktop and mobile devices.
 
-Database: MongoDB Atlas
+Persistent Database – Chat history and user data are stored in MongoDB.
 
-Media Storage: Cloudinary
+Technologies Used
 
-Deployment: Vercel
+Frontend: React, TailwindCSS
 
-⚙️ Features
-Front-end
+Backend: Node.js, Express
 
-Responsive modern interface
+Database: MongoDB
 
-JWT-based authentication
+Storage & Media: Cloudinary
 
-Real-time messaging
+Authentication: JWT (JSON Web Tokens)
 
-Image upload and display
+Hosting: Vercel
 
-User profile management (avatar, username)
+Installation
+Frontend
+cd client
+npm install
+npm start
 
-Back-end
+Backend
+cd server
+npm install
+npm start
 
-Secure REST API with JWT
 
-User and session management
+Make sure to create a .env file in the backend folder with your own secrets and API keys.
 
-MongoDB for storing messages and profiles
+Environment Variables (example)
+MONGODB_URI=XXXX
+PORT=3000
+JWT_SECRET=XXXX
+CLOUDINARY_CLOUD_NAME=XXXX
+CLOUDINARY_API_KEY=XXXX
+CLOUDINARY_API_SECRET=XXXX
 
-Secure Cloudinary uploads
+Project Structure
+chatliveapp/
+├── client/           # Frontend React app
+├── server/           # Backend Express API
+├── README.md         # This file
+└── .gitignore        # Ignored files
 
 Deployment
 
-Custom domains (maximeguillaumin.com and chatliveapp.maximeguillaumin.com)
+Frontend and backend are hosted on Vercel.
 
-DNS configuration for Vercel
+MongoDB Atlas is used for database hosting.
 
-Automatic CI/CD from GitHub
+Cloudinary manages image uploads.
 
-⚠️ Security & Sensitive Files
+Contributing
 
-For the public repository, all sensitive information has been replaced with placeholders (XXXX) in the .env file:
-
-MONGODB_URI="XXXX"
-JWT_SECRET="XXXX"
-CLOUDINARY_API_KEY="XXXX"
-CLOUDINARY_API_SECRET="XXXX"
-
-
-⚠️ Never include real credentials in a public repo.
-
-📦 Installation & Usage
-
-Clone the repo:
-
-git clone https://github.com/emgee97/chatliveapp-public.git
-cd chatliveapp
-
-
-Install dependencies for both front-end and back-end:
-
-# Front-end
-cd client
-npm install
-
-# Back-end
-cd ../server
-npm install
-
-
-Create a .env file with your real credentials:
-
-MONGODB_URI="your_mongodb_uri"
-JWT_SECRET="your_jwt_secret"
-CLOUDINARY_CLOUD_NAME="your_cloud_name"
-CLOUDINARY_API_KEY="your_api_key"
-CLOUDINARY_API_SECRET="your_api_secret"
-
-
-Run the project:
-
-# Front-end
-cd ../client
-npm start
-
-# Back-end
-cd ../server
-npm run dev
-
-
-Access the app in your browser:
-
-http://localhost:3000
-
-🔗 Deployment
-
-The project is deployed on Vercel:
-
-Front-end: https://chatliveapp.vercel.app
-
-Custom domain: https://chatliveapp.maximeguillaumin.com
-
-📂 Project Structure
-chatliveapp/
-├─ client/         # React Front-end
-├─ server/         # Node/Express Back-end
-├─ .gitignore      # Ignore sensitive and temporary files
-├─ README.md       # This file
+This project is open-source. Feel free to open issues or pull requests. Please do not commit sensitive information (API keys, database URIs, etc.).
